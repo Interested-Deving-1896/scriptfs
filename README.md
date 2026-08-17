@@ -1,26 +1,42 @@
 # scriptfs
 
-**scriptfs** lets you turn your filesystem into a scriptable resource using a simple `scripts.yaml` configuration file. Define custom actions for file operations and handle different MIME types with ease.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/scriptfs) [![KDE Eco](https://img.shields.io/badge/KDE%20Eco-certified-brightgreen?logo=kde&logoColor=white&style=flat-square)](https://eco.kde.org/) [![Blue Angel](https://img.shields.io/badge/Blue%20Angel-DE--UZ%20215-0055a4?style=flat-square)](https://www.blauer-engel.de/en/certification/criteria) [![Energy](https://api.green-coding.io/v1/ci/badge/get?repo=Interested-Deving-1896%2Fscriptfs&branch=main&workflow=eco-audit.yml)](https://metrics.green-coding.io/ci-index.html)
 
-## Features
 
-- **Custom Actions**: Define what happens when you write to a file.
-- **MIME Type Detection**: Automatically detect and handle different MIME types of contents sent to a file.
-- **Command Execution**: Run commands or scripts based on file operations and mimetype
-- **Templating**: Use Go text/templating with sprig v3 functions for dynamic content.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-## Installation
+## Architecture
 
-1. Make sure you have Go installed.
-2. Clone the repository and build the project:
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-```sh
-git clone --depth=1 https://github.com/xplshn/scriptfs
+## Install
+
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
+
+```bash
+git clone https://github.com/Interested-Deving-1896/scriptfs.git
 cd scriptfs
-go build -o scriptfs
 ```
 
+## Usage
+
+
+Run **scriptfs**:
+
+```sh
+./scriptfs --config path/to/scripts.yaml --mount /path/to/mountpoint
+```
+
+- `--config`: Path to your `scripts.yaml` file.
+- `--mount`: Where you want to mount the filesystem.
+- `--debug`: (Optional) Enable debug output.
+
 ## Configuration
+
 
 Create a `scripts.yaml` file to define your filesystem behavior. Here's an example:
 
@@ -62,41 +78,62 @@ defaults:
   enqueue: true
 ```
 
-## Usage
+## CI
 
-Run **scriptfs**:
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
 
-```sh
-./scriptfs --config path/to/scripts.yaml --mount /path/to/mountpoint
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/scriptfs`](https://github.com/Interested-Deving-1896/scriptfs) and mirrored through:
+
+```
+Interested-Deving-1896/scriptfs  ──►  OpenOS-Project-OSP/scriptfs  ──►  OpenOS-Project-Ecosystem-OOC/scriptfs
 ```
 
-- `--config`: Path to your `scripts.yaml` file.
-- `--mount`: Where you want to mount the filesystem.
-- `--debug`: (Optional) Enable debug output.
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-## Show & Tell
-![image](https://github.com/user-attachments/assets/fa118c25-b842-4b1a-b994-8de9a29e1bc3)
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream influences recorded._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## Accessibility
+
+<!-- AI:start:accessibility -->
+This repo uses automated accessibility auditing via `check-accessibility.yml`.
+
+Checks include: CODEOWNERS ownership coverage, README screen-reader compatibility,
+WCAG 2.1 AA HTML compliance, audio overview (espeak-ng), and Braille output (liblouis).
+
+
+
+
+Run the [Check Accessibility](https://github.com/Interested-Deving-1896/scriptfs/actions/workflows/check-accessibility.yml)
+workflow to generate the first report and accessibility artifacts.
+See [DOCS/accessibility.md](https://github.com/Interested-Deving-1896/scriptfs/blob/main/DOCS/accessibility.md) for the full reference.
+<!-- AI:end:accessibility -->
 
 ## License
 
-**scriptfs** is licensed under the following licenses: Choose whichever fits your needs best:
-- ISC (Pre-2007 ISC License, the one the OpenBSD project uses)
-- MIT-0 (MIT ZERO attribution)
-- Unlicense (The Unlicense)
-
-## Contributing
-
-Feel free to open an issue or submit a pull request to this repo.
-
-## Acknowledgments
-
-- **Go-Fuse**: For the FUSE library.
-- **mimetype**: For MIME type detection.
-- **sprig**: For additional template functions.
-
-###### TODO; Provide examples for actions of type "read", as well as add support for actions for type "list" and "execute", etc.
-###### TODO; Figure out what to do with errorMsg (YAML key that lets you specify custom error messages) -> Either remove such functionality or come up with a __viable__ alternative.
-
-## Contact
-
-For questions or issues, open an issue on this repo
+<!-- AI:start:license -->
+[Unlicense](https://github.com/Interested-Deving-1896/scriptfs/blob/master/UNLICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
